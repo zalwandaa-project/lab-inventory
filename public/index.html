@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LabInventory</title>
+    <meta name="description" content="Laboratory Inventory & Borrowing Management System">
+    <link rel="icon" href="/assets/favicon.png">
+    <script>
+        // Siapkan animasi sebelum halaman tampil (pengaman ada di app.js).
+        document.documentElement.classList.add('anim-ready', 'force-motion');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Urbanist:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/assets/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <div class="login-page"><div class="text-center text-muted">Memuat aplikasi…</div></div>
+</div>
+<script>
+    // Petunjuk bila aplikasi dibuka tanpa server (mis. lewat Live Server atau klik ganda file HTML).
+    setTimeout(function () {
+        var el = document.querySelector('#app .text-muted');
+        if (el && el.textContent.indexOf('Memuat') === 0) {
+            el.innerHTML = '<div style="max-width:520px;text-align:left;line-height:1.7">' +
+                '<h2 style="color:#fff;font-size:1.4rem">Aplikasi belum terhubung ke server</h2>' +
+                'Halaman ini harus dibuka lewat server aplikasi, bukan Live Server atau membuka file HTML langsung.<br><br>' +
+                '<b>Cara menjalankan di komputer:</b><br>1. Buka terminal di folder proyek (yang berisi <code>dev-server.mjs</code>)<br>' +
+                '2. Jalankan <code>node dev-server.mjs</code><br>3. Buka <a href="http://localhost:8888">http://localhost:8888</a><br><br>' +
+                'Versi online: buka alamat situs Netlify Anda.</div>';
+        }
+    }, 4000);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/app.js" type="module"></script>
+</body>
+</html>
